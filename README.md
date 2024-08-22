@@ -1,8 +1,7 @@
-# URL Uploader
+# CSV/EXcel File Uploader
+A fastest Node.js package for processing uploaded CSV or Excel files.
 
-A Node.js package for processing uploaded CSV or Excel files.
-
-## prerequisites
+## Prerequisites
 - Your file should be CSV or Excel
 - The file must have columns
 
@@ -58,32 +57,24 @@ Result should be error or data in the file
 ```
 
 #### Data response
-##### 1. Read data in CSV or EXCEL file with no duplicated data
+##### 1. Read all data in CSV or EXCEL file
 ```bash
 {
   status: 200,
   message: 'File processed successfully',
-  data: [
-    { url: 'https://www.example1.com' },
-    { url: 'https://www.example2.com' }
-  ],
-  duplicatedWebsites: []
-}
-```
-
-##### 2. Read data in CSV or EXCEL file with duplicated urls data
-```bash
-{
-  status: 200,
-  message: 'File processed successfully',
-  data: [
-    { url: 'https://www.example1.com' },
-    { url: 'https://www.example2.com' }
-  ],
-  duplicatedWebsites: [
-    { url: 'https://www.example1.com' },
-    { url: 'https://www.example1.com' },
-    { url: 'https://www.example1.com' }
+   data: [
+    { No: 1, url: 'http://example.com', Id: 58 },
+    { No: 2, url: 'http://example2.com', Id: 59 },
+    { No: 3, url: 'http://example3.com', Id: 60 },
+    { No: 4, url: 'http://example4.com', Id: 61 },
+    { No: 5, url: 'http://example5.com', Id: 62 },
+    { No: 6, url: 'http://example6.com', Id: 63 },
+    { No: 7, url: 'http://example.com', Id: 64 },
+    { No: 8, url: 'http://example2.com', Id: 65 },
+    { No: 9, url: 'http://example3.com', Id: 66 },
+    { No: 10, url: 'http://example4.com', Id: 67 },
+    { No: 11, url: 'http://example5.com', Id: 68 }
   ]
 }
+```
 ```
